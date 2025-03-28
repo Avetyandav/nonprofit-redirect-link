@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting to PayPal...</title>
+  <script>
+    // Try opening PayPal app
+    window.onload = function() {
+      setTimeout(function() {
+        window.location.href = "https://www.paypal.com/qrcodes/managed/6f8e5d90-1d08-49ed-92d1-43adca6ff97b";
+      }, 1500);
+
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = "paypal://send?recipient=admin@bslffoundation.org";
+      document.body.appendChild(iframe);
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to PayPal...</p>
+</body>
+</html>
